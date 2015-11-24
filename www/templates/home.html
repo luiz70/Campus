@@ -1,0 +1,23 @@
+<ion-view view-title="home"  hide-nav-bar="true">
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in"  has-bouncing="false" scroll="false">
+       <ui-gmap-google-map control="map" center='map.center' bounds='map.bounds' zoom='map.zoom' style="height: 100vh; width:100vw" options='map.options' pan='true'>
+    
+    </ui-gmap-google-map>
+       
+       
+    </ion-content>
+</ion-view>
+
+	<button  nav-direction="back" ui-sref="app.friends" class="tab-app animate-fade-slide-in" style="left: 1vh;" nav-direction="back"  >
+    	<i class="icon ion-ios-people" ></i>
+    </button>
+
+
+	<button nav-direction="forward" ui-sref="app.places" class="tab-app animate-fade-slide-in" style="right: 1vh;">
+    	<i class="icon ion-android-pin"></i>
+    </button>
+
+	<button nav-direction="back" ui-sref="app.profile" class="tab-profile animate-fade-slide-in {{inCampus?'':'offline-Circle'}}" style='left: 1vh;background-image: url({{"https://www.virtual-guardian.com/campus/perfil/"+Usuario.IdUsuario+".jpg"}});'><div class="status-user-location {{inCampus?'':'offline'}}"></div></button>
+
+<button class="tab-top animate-fade-slide-in" style="right: 1vh;" menu-toggle="right"><i class="icon ion-android-more-vertical"></i></button>
+ <!--button class="tab-app active" style="left: 0vh; right:0px; margin:auto"><i class="icon ion-map"></i></button-->

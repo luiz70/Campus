@@ -1,0 +1,57 @@
+<ion-view view-title="Mi información" hide-nav-bar="true">
+    
+        <div class="hero slide-up" style="background-image: url('img/profile-bg.jpg');">
+            <div class="content">
+                <div class="avatar" style='background-image: url({{"https://www.virtual-guardian.com/campus/perfil/"+Usuario.IdUsuario+".jpg"}});'></div>
+                <h3><a class="light">{{Usuario.Nombre+ " "+Usuario.Apellido}}</a></h3>
+                <h4>{{Usuario.Matricula}}</h4>
+            </div>
+        </div>
+        <!--div class="tabs tabs-dark tabs-icon-top static">
+           <button class="button button-icon button-clear ion-edit perfil-editar" ></button><div style="font-size:15px;">Editar perfil</div>
+        </div-->
+        <h4 class="content padding double-padding-x title-perfil" style="z-index:100"><i class="icon ion-clock" style="margin:5px"></i>   Actividad reciente</h4>
+        <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in" style="top: 254px;">
+        <div class="list animate-fade-slide-in-right">
+            <div class="item card-item">
+            <div  class="card stable-bg ink ink-dark">
+                <div class="item item-text-wrap">
+                    <button class="button button-icon button-clear ion-android-car icon-historial"></button>
+                    <strong>Auto estacionado</strong> #23
+                    <div class="card-footer text-right">
+                        <div class="pull-left">
+                            <i class="icon ion-clock"></i> Hace 30 min
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item card-item">
+            <div  class="card stable-bg ink ink-dark">
+                <div class="item  item-text-wrap">
+                    <button class="button button-icon button-clear ion-ios-book icon-historial"></button>
+                    <strong>Lenguajes de programación</strong> 3301
+                    <div class="card-footer text-right">
+                        <div class="pull-left">
+                            <i class="icon ion-clock"></i> 14:00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item card-item">
+            <div  class="card stable-bg ink ink-dark">
+                    <div class="item  item-text-wrap">
+                    <button class="button button-icon button-clear ion-document-text icon-historial" style="margin-bottom:0px;"></button>
+                    <strong>Examen parcial 2</strong> Programacion web
+                    <div class="card-footer text-right">
+                        <div class="pull-left">
+                            <i class="icon ion-clock"></i> Vie. 20 de Octubre
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </ion-content>
+</ion-view>

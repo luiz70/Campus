@@ -1,0 +1,29 @@
+<ion-view view-title="Login" align-title="left" class="login-view"  hide-nav-bar="true" ng-cloak>
+    <ion-content class="padding" has-bouncing="false" scroll="false">
+       <div class="login-logo-container" >
+    	<img ng-src="img/logo.png" class="login-logo">
+    </div>
+    <div class="login-input-container">
+    	<div class="padding" style="padding-left: 10% !important;padding-right: 10% !important;">
+         <label class="item login-input-label item-input " >
+    			
+         <input type="text" placeholder="{{idioma.Login[2]}}" class="login-input" ng-model="login.Matricula" ng-keydown="loginKeyDown($event,1)"> 
+         <i class="icon ion-person placeholder-icon " style="    color: #CDCDCD;"></i>
+         </label>
+         <label class="item login-input-label item-input " >
+         <input id="login_password" type="password" placeholder="{{idioma.Login[3]}}" class="login-input" ng-model="login.Contrasena" ng-keydown="loginKeyDown($event,2)"> 
+         <i class="icon ion-locked placeholder-icon" style="    color: #CDCDCD;"></i>
+         </label>
+
+         </div>
+    </div>
+    <div class="login-enter-button-container">
+    	<button nav-direction="forward" class="button font-bold rounded login-enter-button" ng-click="singIn()">{{idioma.Login[4]}}</button>
+    </div>
+    </ion-content>
+    <div class="bar-footer buttons-footer">
+  	<button class="button button-block button-vg-blue" nav-direction="forward" ui-sref="app.registro">
+ 	 {{idioma.Login[5]}}
+	</button>
+  </div>
+</ion-view>

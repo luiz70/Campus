@@ -1,0 +1,27 @@
+<ion-view view-title="Lugares" hide-nav-bar="true">
+    <ion-content ng-class="{expanded:isExpanded}">
+        <div class="content">
+        <ion-refresher pulling-text="{{idioma.general[3]}}" on-refresh="refresh()" spinner="ripple"></ion-refresher>
+            <!--div class="list animate-fade-slide-in-right">
+                 <a class="item item-icon-left" ng-repeat="lugar in lugares track by $index" ng-click="placeSelected(lugar)">
+    				<i class="icon {{lugar.Icono}} icono-lugares"></i>
+    				<span style="font-weight:bold; margin-left:10px">{{lugar.Nombre}}</span>
+    				<span class="item-note" >
+      					{{lugar.Personas+" Personas"}}
+    				</span>
+  				</a>
+            </div-->
+            <div class="list condensed-space no-padding animate-fade-slide-in-right">
+                <div class="card animate-fade-slide-in-right">
+                    <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse"  ng-repeat="lugar in lugares track by $index" ng-click="placeSelected(lugar)">
+                        <h2>{{lugar.Nombre}}</h2>
+                        <p>{{lugar.Personas+" Personas"}}</p>
+                        
+                        <img src={{"../img/"+lugar.Icono+".jpg"}} style="height:auto !important;">
+                    </a>
+                </div>
+                </div>
+            <div class="loading-list" ng-show="lugares.length==0"><ion-spinner icon="ripple" class="spinner-blue"></ion-spinner></div>
+        </div>
+    </ion-content>
+</ion-view>

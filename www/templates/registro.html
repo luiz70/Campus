@@ -1,0 +1,16 @@
+<ion-view view-title="Registro"   class="login-view"  hide-nav-bar="false" ng-cloak>
+    <ion-content class="padding" has-bouncing="false">
+    <img src="img/logo_horizontal.png" class="logo-registro">
+    <div class="texto-registro">{{idioma.registro[5]}}</div>
+       <input type="email" placeholder="{{idioma.registro[1]}}" class="input-registro" ng-model="registro.Email">
+       <input type="text" placeholder="{{idioma.registro[2]}}" class="input-registro" ng-model="registro.Nombre">
+       <input type="text" placeholder="{{idioma.registro[3]}}" class="input-registro" ng-model="registro.Apellido">
+       <input type="password" placeholder="{{idioma.registro[4]}}" class="input-registro" style="margin-bottom:0px;" ng-model="registro.Contrasena">
+       <div class="registro-texto-mini">{{idioma.registro[6]}}</div>
+    </ion-content>
+    <div class="bar-footer buttons-footer">
+  	<button class="button button-block button-vg-blue" ng-click="registraUsuario()">
+ 	 {{idioma.general[4]}}
+	</button>
+  </div>
+</ion-view>
